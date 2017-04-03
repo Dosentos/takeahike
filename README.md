@@ -1,3 +1,3 @@
 # takeahike
 Take a Hike -vaelluspalvelu
-Muutos 3.4.2017
+Uusi muutos 3.4.2017
