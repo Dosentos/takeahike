@@ -1,0 +1,76 @@
+@charset "UTF-8";
+html, body {
+  font-family: 'Open Sans', Verdana, sans-serif;
+  background-color: #f0f0f0;
+  color: #303030; }
+
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; }
+
+header {
+  height: 100px;
+  background-color: #558259; }
+
+nav {
+  padding: 15px 0 15px 0;
+  height: 100%;
+  text-align: center; }
+
+nav a {
+  height: 100%;
+  color: white;
+  font-size: 1.4em;
+  padding: 0 15px;
+  float: left; }
+
+.nav-borders {
+  border-right: 1px solid #f0f0f0;
+  float: left; }
+
+.nav-borders:last-child {
+  border-right: none; }
+
+.nav-borders:first-child {
+  border-left: 1px solid #f0f0f0; }
+
+#logo img {
+  margin-left: 5px;
+  padding-top: 5px;
+  width: 250px; }
+
+button {
+  background-color: #558259;
+  color: #f0f0f0;
+  border: 2px solid #b28160;
+  border-radius: 10px;
+  background-clip: padding-box; }
+
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+/*
+   default:75rem (1200px)
+*/
+.row {
+  max-width: none; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+/* Tyylit jotka vaikuttavat 0px yl├Âsp├ñin */
+/* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
+/* Tyylit jotka vaikuttavat 641px yl├Âsp├ñin */
+/* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
+/* Tyylit jotka vaikuttavat 1025px yl├Âsp├ñin */
+/* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
+/* Tyylit jotka vaikuttavat 1441px yl├Âsp├ñin */
+
+/*# sourceMappingURL=main.css.map */

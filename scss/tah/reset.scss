@@ -1,0 +1,17 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+
+//Nollataan foundationin maksimi leveys,
+// jotta saadaan sisältö leviämään koko näytölle isoillakin näytöillä
+/*
+   default:75rem (1200px)
+*/
+.row{
+  max-width: none;
+}
