@@ -12,6 +12,6 @@
     <div id="test-div"></div>
 
     <!-- Hello world reactilla -->
-    <script src="../js/test.js" type="text/babel">
+    <script src="js/test.js" type="text/babel"> </script>
 </main>
 

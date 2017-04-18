@@ -1,1 +1,5 @@
-Take a hike on uusi vaellussivusto, jonka punainen lanka on aktiivinen käyttäjäkunta ja heidän sivustolle jakamat kommentit ja arviot eri reiteistä.
+# Take a hike
+
+The website will be up on http://takeahike.projects.tamk.fi
+
+asdasdasd

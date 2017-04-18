@@ -1,0 +1,24 @@
+@import 'header-styles';
+@import 'button';
+@import 'reset';
+@import 'right';
+@import 'left';
+
+@media only screen {
+} /* Tyylit jotka vaikuttavat 0px ylöspäin */
+
+@media only screen and (max-width: 40em) { } /* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) { } /* Tyylit jotka vaikuttavat 641px ylöspäin */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
+
+// Large screens
+@media only screen and (min-width: 64.063em) { } /* Tyylit jotka vaikuttavat 1025px ylöspäin */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* Tyylit jotka vaikuttavat 1441px ylöspäin */
+

@@ -9,17 +9,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take a hike</title>
 
-    <!-- Foundation CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
-    <!-- Take a Hike CSS -->
-    <link rel="stylesheet" href="css/main.css" type="text/css" />
+	<!-- Take a Hike CSS -->
+    <!--Älkää antanko phpstormin erroreiden hämätä. Nämä luetaan index.php:ssa, joten ne toimii kuten pitää vaikka tää näyttääkin erroria-->
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="scss/main.css" type="text/css" />
 
-    <!-- Foundation JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
-    <!-- React -->
+    <!-- Open Sans Font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+    <!-- Font Awesome ICONS -->
+    <script src="https://use.fontawesome.com/c37903bf0f.js"></script>
+	
+	<!-- React -->
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <!-- React-DOM -->
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
@@ -27,12 +35,19 @@
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+    <script src="js/app.js"></script>
 </head>
 <body>
-    <header>
-        <h1> This is header</h1>
-        <nav>
+<header class="row">
+    <div class="medium-12 large-12 columns">
+        <div class="row">
+            <div id="logo" class="medium-4 columns">
+                <a href="?page=frontpage"><img src="pics/tah_logo.png" alt="Take a Hike logo" /></a>
+            </div>
+        <nav class="medium-8 x-large columns">
             <?php
             foreach ($content as $i => $page){
                 if($page["name"]!="" ){
@@ -40,9 +55,12 @@
                     if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
                         $active = "active";
                     }
-                    echo "<a class='$active' href='?page=$page[id]'>$page[name]</a>";
+                    echo "<div class='nav-borders'><a class='$active' href='?page=$page[id]'>$page[name]</a></div>";
                 }
             }
             ?>
         </nav>
-    </header>
+        </div>
+    </div>
+</header>
+

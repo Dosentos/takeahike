@@ -7,12 +7,12 @@
  */
 
 $content = [
-    ["privilege"=>0, "name"=>"Front page", "id"=>"frontpage", "include"=>"php/frontpage_content.php"],
-    ["privilege"=>0, "name"=>"Inspire", "id"=>"inspire", "include"=>"php/inspire_content.php"],
-    ["privilege"=>0, "name"=>"About Hiking", "id"=>"hiking", "include"=>"php/hiking_content.php"],
-    ["privilege"=>0, "name"=>"Info", "id"=>"about", "include"=>"php/info_content.php"],
+    ["privilege"=>0, "name"=>"<span class=\"fa fa-home fa-fw\"></span><br>Front page", "id"=>"frontpage", "include"=>"php/frontpage_content.php"],
+    ["privilege"=>0, "name"=>"<span class=\"fa fa-lightbulb-o fa-fw\"></span><br>Inspire", "id"=>"inspire", "include"=>"php/inspire_content.php"],
+    ["privilege"=>0, "name"=>"<span class=\"fa fa-blind fa-fw\"></span><br>About Hiking", "id"=>"hiking", "include"=>"php/hiking_content.php"],
+    ["privilege"=>0, "name"=>"<span class=\"fa fa-info-circle fa-fw\"></span><br>Info", "id"=>"about", "include"=>"php/info_content.php"],
     ["privilege"=>0, "name"=>"", "id"=>"destination", "include"=>"php/destination_content.php"],
-    ["privilege"=>1, "name"=>"My Page", "id"=>"mypage", "include"=>"php/mypage_content.php"],
+    ["privilege"=>1, "name"=>"<span class=\"fa fa-user fa-fw\"></span><br>My Page", "id"=>"mypage", "include"=>"php/mypage_content.php"],
     ["privilege"=>2, "name"=>"", "id"=>"admin", "include"=>"php/admin_content.php"]
 ];
 /*
