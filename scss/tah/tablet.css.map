@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA,cAAc;EACZ,OAAO,EAAE,IAAI",
+"mappings": ";AAAA,cAAc;EACZ,OAAO,EAAE,IAAI;;AAEf,OAAO;EACL,OAAO,EAAE,IAAI;;AAEf;;;;;;;;;;;;;GAaG",
 "sources": ["tablet.scss"],
 "names": [],
 "file": "tablet.css"

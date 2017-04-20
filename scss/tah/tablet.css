@@ -1,4 +1,23 @@
+@charset "UTF-8";
 .show-nav-text {
   display: none; }
+
+.mobile {
+  display: none; }
+
+/*
+Siirret├ñ├ñn tablettiin..
+
+.nav-borders{
+  border-right: 1px solid $gray2;
+  float: left;
+}
+.nav-borders:last-child{
+  border-right: none;
+}
+.nav-borders:first-child{
+  border-left: 1px solid $gray2;
+}
+ */
 
 /*# sourceMappingURL=tablet.css.map */

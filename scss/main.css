@@ -1,3 +1,4 @@
+@charset "UTF-8";
 button {
   background-color: #558259;
   color: #f0f0f0;
@@ -36,8 +37,18 @@ ol {
     font-family: 'Roboto', sans-serif;
     font-weight: 500; }
 
+  header a {
+    color: #f0f0f0; }
+
+  header .row {
+    background-color: #558259;
+    border-top: 1px solid #54423f; }
+
   header .row:first-child {
-    background-color: #558259; }
+    border-top: none; }
+
+  header .row:last-child {
+    border-bottom: 1px solid #54423f; }
 
   nav {
     padding: 15px 0 15px 0;
@@ -51,16 +62,6 @@ ol {
     padding: 0 15px;
     float: left; }
 
-  .nav-borders {
-    border-right: 1px solid #f0f0f0;
-    float: left; }
-
-  .nav-borders:last-child {
-    border-right: none; }
-
-  .nav-borders:first-child {
-    border-left: 1px solid #f0f0f0; }
-
   #logo img {
     margin-left: 5px;
     padding-top: 5px;
@@ -68,7 +69,9 @@ ol {
     width: 90%; }
 
   header .fa-fw {
-    font-size: 250%; }
+    font-size: 2em;
+    padding: 10px 10px 10px 20px;
+    width: 80px; }
 
   #hamburger img {
     padding-top: 20px;
@@ -77,7 +80,25 @@ ol {
 /* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 40.063em) {
   .show-nav-text {
-    display: none; } }
+    display: none; }
+
+  .mobile {
+    display: none; }
+
+  /*
+  Siirret├ñ├ñn tablettiin..
+  
+  .nav-borders{
+    border-right: 1px solid $gray2;
+    float: left;
+  }
+  .nav-borders:last-child{
+    border-right: none;
+  }
+  .nav-borders:first-child{
+    border-left: 1px solid $gray2;
+  }
+   */ }
 /* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 64.063em) {
   .show-desktop {

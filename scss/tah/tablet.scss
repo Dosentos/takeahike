@@ -1,3 +1,20 @@
 .show-nav-text{
   display: none;
 }
+.mobile{
+  display: none;
+}
+/*
+Siirretään tablettiin..
+
+.nav-borders{
+  border-right: 1px solid $gray2;
+  float: left;
+}
+.nav-borders:last-child{
+  border-right: none;
+}
+.nav-borders:first-child{
+  border-left: 1px solid $gray2;
+}
+ */

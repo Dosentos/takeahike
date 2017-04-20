@@ -45,7 +45,7 @@
 <body>
 <header>
     <div class="row">
-        <div class="small-3 columns">
+        <div class="small-3 columns mobile">
             <a id="hamburger" href="#" onClick="toggleNav()"><img src="pics/hamburger.png" alt="Take a Hike logo" /></a>
         </div>
         <div id="logo" class="small-9 columns">
@@ -69,6 +69,7 @@
         </nav>
   -->
     </div>
+    <div class="row mobile">
             <?php
             foreach ($content as $i => $page){
                 if($page["name"]!="" ){
@@ -79,8 +80,7 @@
                     echo "<div class=\"row\"><div class=\"small-12 columns mobile-nav\"><a class='$active' href='?page=$page[id]'>$page[name]</a></div></div>";
                 }
             }
-
-
             ?>
+    </div>
 </header>
 
