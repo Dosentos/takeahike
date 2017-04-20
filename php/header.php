@@ -48,7 +48,7 @@
 <body>
 <header>
     <div class="row">
-        <div class="small-3 columns mobile">
+        <div class="small-3 columns mobile" id="hamburger-bg">
             <a id="hamburger" href="#" onClick='toggleVisibility("mobile-nav")'><img src="pics/hamburger.png" alt="Take a Hike logo" /></a>
         </div>
         <div id="logo" class="small-9 medium-6 large-6 columns left">
