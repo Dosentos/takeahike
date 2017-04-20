@@ -41,12 +41,15 @@
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/app.js"></script>
+
+    <!-- Take a Hike JS -->
+    <script src="js/functions.js" type="text/javascript"></script>
 </head>
 <body>
 <header>
     <div class="row">
         <div class="small-3 columns mobile">
-            <a id="hamburger" href="#" onClick="toggleNav()"><img src="pics/hamburger.png" alt="Take a Hike logo" /></a>
+            <a id="hamburger" href="#" onClick='toggleVisibility("mobile-nav")'><img src="pics/hamburger.png" alt="Take a Hike logo" /></a>
         </div>
         <div id="logo" class="small-9 columns">
             <a href="?page=frontpage"><img src="pics/tah_logo.png" alt="Take a Hike logo" /></a>
@@ -69,7 +72,7 @@
         </nav>
   -->
     </div>
-    <div class="row mobile">
+    <div class="row mobile" id="mobile-nav">
             <?php
             foreach ($content as $i => $page){
                 if($page["name"]!="" ){
@@ -77,7 +80,7 @@
                     if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
                         $active = "active";
                     }
-                    echo "<div class=\"row\"><div class=\"small-12 columns mobile-nav\"><a class='$active' href='?page=$page[id]'>$page[name]</a></div></div>";
+                    echo "<div class=\"row\"><div class=\"small-12 columns\"><a class='$active' href='?page=$page[id]'>$page[name]</a></div></div>";
                 }
             }
             ?>
