@@ -46,7 +46,7 @@
 <header>
     <div class="row">
         <div class="small-3 columns">
-            <span class="fa fa-bars fa-fw" id="hamburger" onClick="toggleNav();"></span>
+            <a id="hamburger" href="#" onClick="toggleNav()"><img src="pics/hamburger.png" alt="Take a Hike logo" /></a>
         </div>
         <div id="logo" class="small-9 columns">
             <a href="?page=frontpage"><img src="pics/tah_logo.png" alt="Take a Hike logo" /></a>
