@@ -1,10 +1,10 @@
 button{
   //Metsän vihreä
-  background-color: #558259;
+  background-color: $green1;
   //valkea harmaa
-  color: #f0f0f0;
+  color: $gray2;
   //peuran ruskea
-  border: 2px solid #b28160;
+  border: 2px solid $brown2;
   border-radius: 10px;
   background-clip: padding-box;
 }

@@ -28,8 +28,8 @@
 
     <!-- Font Awesome ICONS -->
     <script src="https://use.fontawesome.com/c37903bf0f.js"></script>
-	
-	<!-- React -->
+
+    <!-- React -->
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <!-- React-DOM -->
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
@@ -43,13 +43,32 @@
     <script src="js/app.js"></script>
 </head>
 <body>
-<header class="row">
-    <div class="medium-12 large-12 columns">
-        <div class="row">
-            <div id="logo" class="medium-4 columns">
-                <a href="?page=frontpage"><img src="pics/tah_logo.png" alt="Take a Hike logo" /></a>
-            </div>
-        <nav class="medium-8 x-large columns">
+<header>
+    <div class="row">
+        <div class="small-3 columns">
+            <span class="fa fa-bars fa-fw" id="hamburger" onClick="toggleNav();"></span>
+        </div>
+        <div id="logo" class="small-9 columns">
+            <a href="?page=frontpage"><img src="pics/tah_logo.png" alt="Take a Hike logo" /></a>
+        </div>
+        <!--
+        <nav class="small-12 medium-8 x-large columns">
+            <?php
+        /*
+                  foreach ($content as $i => $page){
+                      if($page["name"]!="" ){
+                          $active = "";
+                          if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
+                              $active = "active";
+                          }
+                          echo "<div class='nav-borders'><a class='$active' href='?page=$page[id]'>$page[name]</a></div>";
+                      }
+                  }
+      */
+        ?>
+        </nav>
+  -->
+    </div>
             <?php
             foreach ($content as $i => $page){
                 if($page["name"]!="" ){
@@ -57,12 +76,11 @@
                     if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
                         $active = "active";
                     }
-                    echo "<div class='nav-borders'><a class='$active' href='?page=$page[id]'>$page[name]</a></div>";
+                    echo "<div class=\"row\"><div class=\"small-12 columns mobile-nav\"><a class='$active' href='?page=$page[id]'>$page[name]</a></div></div>";
                 }
             }
+
+
             ?>
-        </nav>
-        </div>
-    </div>
 </header>
 
