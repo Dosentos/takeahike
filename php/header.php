@@ -14,9 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take a hike</title>
 
-	<!-- Take a Hike CSS -->
+
     <!--Älkää antanko phpstormin erroreiden hämätä. Nämä luetaan index.php:ssa, joten ne toimii kuten pitää vaikka tää näyttääkin erroria-->
+    <!-- Foundation CSS-->
     <link rel="stylesheet" href="css/app.css" />
+    <!-- Take a Hike CSS -->
     <link rel="stylesheet" href="scss/main.css" type="text/css" />
 
     <!-- Open Sans Font-->
