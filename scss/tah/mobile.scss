@@ -12,7 +12,6 @@ h1, h2, h3{
 header a{
   color: $gray2;
 }
-
 header .row{
   background-color: $green1;
   border-top: 1px solid $brown1;
@@ -20,25 +19,11 @@ header .row{
 header .row:first-child{
  border-top: none;
 }
-
 header .row:last-child{
   border-bottom: 1px solid $brown1;
 }
-
-nav{
-  padding: 15px 0 15px 0;
-  height: 100%;
-  text-align: center;
-}
-nav a{
-  height: 100%;
-  color: white;
-  font-size: 1.4em;
-  padding: 0 15px;
-  float: left;
-}
 #logo img{
-  margin-left: 5px;
+  margin-left: 10%;
   padding-top: 5px;
   max-width: 250px;
   width: 90%;
@@ -54,5 +39,8 @@ header .fa-fw{
   min-width: 50px;
 }
 #mobile-nav{
+  display: none;
+}
+#tablet-nav{
   display: none;
 }

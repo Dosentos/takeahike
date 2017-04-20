@@ -1,20 +1,37 @@
-.show-nav-text{
+.nav-name{
   display: none;
 }
 .mobile{
   display: none;
 }
-/*
-Siirretään tablettiin..
+#tablet-nav{
+  display: block;
+}
+header .fa-fw{
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  width: auto;
+}
+nav{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+#logo img{
+  width: 250px;
+}
 
 .nav-borders{
   border-right: 1px solid $gray2;
-  float: left;
+  width: 20%;
+  text-align: center;
+  padding-top: 30px;
+  height: 80px;
 }
 .nav-borders:last-child{
   border-right: none;
 }
-.nav-borders:first-child{
+.nav-borders:first-child {
   border-left: 1px solid $gray2;
 }
- */

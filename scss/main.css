@@ -1,4 +1,3 @@
-@charset "UTF-8";
 button {
   background-color: #558259;
   color: #f0f0f0;
@@ -50,20 +49,8 @@ ol {
   header .row:last-child {
     border-bottom: 1px solid #54423f; }
 
-  nav {
-    padding: 15px 0 15px 0;
-    height: 100%;
-    text-align: center; }
-
-  nav a {
-    height: 100%;
-    color: white;
-    font-size: 1.4em;
-    padding: 0 15px;
-    float: left; }
-
   #logo img {
-    margin-left: 5px;
+    margin-left: 10%;
     padding-top: 5px;
     max-width: 250px;
     width: 90%; }
@@ -79,33 +66,65 @@ ol {
     min-width: 50px; }
 
   #mobile-nav {
+    display: none; }
+
+  #tablet-nav {
     display: none; } }
 /* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 40.063em) {
-  .show-nav-text {
+  .nav-name {
     display: none; }
 
   .mobile {
     display: none; }
 
-  /*
-  Siirret├ñ├ñn tablettiin..
-  
-  .nav-borders{
-    border-right: 1px solid $gray2;
-    float: left;
-  }
-  .nav-borders:last-child{
-    border-right: none;
-  }
-  .nav-borders:first-child{
-    border-left: 1px solid $gray2;
-  }
-   */ }
+  #tablet-nav {
+    display: block; }
+
+  header .fa-fw {
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    width: auto; }
+
+  nav {
+    padding-left: 0;
+    padding-right: 0; }
+
+  #logo img {
+    width: 250px; }
+
+  .nav-borders {
+    border-right: 1px solid #f0f0f0;
+    width: 20%;
+    text-align: center;
+    padding-top: 30px;
+    height: 80px; }
+
+  .nav-borders:last-child {
+    border-right: none; }
+
+  .nav-borders:first-child {
+    border-left: 1px solid #f0f0f0; } }
 /* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 64.063em) {
-  .show-desktop {
-    display: block; } }
+  .nav-name {
+    display: block; }
+
+  #logo img {
+    width: 320px;
+    max-width: none; }
+
+  .nav-borders {
+    padding-top: 20px;
+    height: 100px; } }
 /* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
+@media only screen and (min-width: 90.063em) {
+  #logo img {
+    width: 400px; }
+
+  .nav-borders {
+    padding-top: 30px;
+    height: 130px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -51,28 +51,10 @@
         <div class="small-3 columns mobile">
             <a id="hamburger" href="#" onClick='toggleVisibility("mobile-nav")'><img src="pics/hamburger.png" alt="Take a Hike logo" /></a>
         </div>
-        <div id="logo" class="small-9 columns">
+        <div id="logo" class="small-9 medium-6 large-6 columns left">
             <a href="?page=frontpage"><img src="pics/tah_logo.png" alt="Take a Hike logo" /></a>
         </div>
-        <!--
-        <nav class="small-12 medium-8 x-large columns">
-            <?php
-        /*
-                  foreach ($content as $i => $page){
-                      if($page["name"]!="" ){
-                          $active = "";
-                          if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
-                              $active = "active";
-                          }
-                          echo "<div class='nav-borders'><a class='$active' href='?page=$page[id]'>$page[name]</a></div>";
-                      }
-                  }
-      */
-        ?>
-        </nav>
-  -->
-    </div>
-    <div class="row mobile" id="mobile-nav">
+        <nav class="medium-6 large-6 columns" id="tablet-nav">
             <?php
             foreach ($content as $i => $page){
                 if($page["name"]!="" ){
@@ -80,10 +62,24 @@
                     if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
                         $active = "active";
                     }
-                    echo "<div class=\"row\"><div class=\"small-12 columns\"><a class='$active' href='?page=$page[id]'>$page[name]</a></div></div>";
+                    echo "<div class='nav-borders left'><a class='$active' href='?page=$page[id]'>$page[name]</a></div>";
                 }
             }
             ?>
+        </nav>
+    </div>
+    <div class="row mobile" id="mobile-nav">
+        <?php
+        foreach ($content as $i => $page){
+            if($page["name"]!="" ){
+                $active = "";
+                if(isset($_GET['page'])  && $_GET['page'] == $page["id"]){
+                    $active = "active";
+                }
+                echo "<div class=\"row\"><div class=\"small-12 columns\"><a class='$active' href='?page=$page[id]'>$page[name]</a></div></div>";
+            }
+        }
+        ?>
     </div>
 </header>
 
