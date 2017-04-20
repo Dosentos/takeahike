@@ -60,6 +60,9 @@ ol {
     padding: 10px 10px 10px 20px;
     width: 80px; }
 
+  #hamburger-bg:hover {
+    background-color: #f0f0f0; }
+
   #hamburger img {
     padding-top: 20px;
     padding-left: 20px;
