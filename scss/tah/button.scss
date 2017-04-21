@@ -1,0 +1,10 @@
+button{
+  //Metsän vihreä
+  background-color: $green1;
+  //valkea harmaa
+  color: $gray2;
+  //peuran ruskea
+  border: 2px solid $brown2;
+  border-radius: 10px;
+  background-clip: padding-box;
+}

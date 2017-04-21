@@ -1,0 +1,50 @@
+
+html, body{
+  font-family: 'Open Sans', Verdana, sans-serif;
+  background-color: $gray2;
+  color: #303030;
+  min-width: 260px;
+}
+h1, h2, h3{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+header a{
+  color: $gray2;
+}
+header .row{
+  background-color: $green1;
+  border-top: 1px solid $brown1;
+}
+header .row:first-child{
+ border-top: none;
+}
+header .row:last-child{
+  border-bottom: 1px solid $brown1;
+}
+#logo img{
+  margin-left: 10%;
+  padding-top: 5px;
+  max-width: 250px;
+  width: 90%;
+}
+header .fa-fw{
+  font-size: 2em;
+  padding: 10px 10px 10px 20px;
+  width: 80px;
+}
+#hamburger-bg:hover{
+  background-color: $gray2;
+
+}
+#hamburger img{
+  padding-top: 20px;
+  padding-left: 20px;
+  min-width: 50px;
+}
+#mobile-nav{
+  display: none;
+}
+#tablet-nav{
+  display: none;
+}

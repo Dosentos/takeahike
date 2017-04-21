@@ -1,0 +1,32 @@
+@import 'tah/colors';
+@import 'tah/button';
+@import 'tah/reset';
+@import 'tah/float';
+
+
+/* Tyylit jotka vaikuttavat suurempiin kuin 0px */
+@media only screen {
+  @import 'tah/mobile';
+}
+
+@media only screen and (max-width: 40em) { } /* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
+
+// Medium screens  /* Tyylit jotka vaikuttavat 41px  */
+@media only screen and (min-width: 40.063em) {
+  @import 'tah/tablet';
+}
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
+
+// Large screens /* Tyylit jotka vaikuttavat suurempiin kuin 1025px */
+@media only screen and (min-width: 64.063em) {
+  @import 'tah/desktop';
+}
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
+
+// XLarge screens /* Tyylit jotka vaikuttavat suurempiin kuin 1441px */
+@media only screen and (min-width: 90.063em) {
+  @import 'tah/desktop-big';
+}
+

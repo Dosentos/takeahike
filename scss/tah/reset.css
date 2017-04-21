@@ -1,0 +1,14 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0; }
+
+/*
+   default:75rem (1200px)
+*/
+.row {
+  max-width: none; }
+
+/*# sourceMappingURL=reset.css.map */
