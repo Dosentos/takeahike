@@ -120,7 +120,12 @@ ol {
 
   .nav-borders {
     padding-top: 20px;
-    height: 100px; } }
+    height: 100px; }
+
+  /* frontpage_content.php */
+  #map {
+    height: 800px;
+    width: 100%; } }
 /* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 90.063em) {
   #logo img {
