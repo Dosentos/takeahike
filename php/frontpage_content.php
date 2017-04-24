@@ -14,14 +14,46 @@
     <div id="map"></div>
     <script>
         function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
+            var finland = {lat: 64.6479041, lng: 17.1438697};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
+                zoom: 5,
+                center: finland
             });
-            var marker = new google.maps.Marker({
-                position: uluru,
+
+            <!-- Kartalla Lemmenjoen ja Sipoonkorven kansallispuistot. EI TOIMI! -->
+            /*
+            var nationalpark = new google.maps.KmlLayer( {
+                url: 'LinkkiPoistettu',
                 map: map
+            });
+            */
+
+            <!-- Kartalla Rödjan bastu ja jokin toinen rakennus. EI TOIMI! -->
+            /*
+            var building = new google.maps.KmlLayer({
+                url: 'LinkkiPoistettu',
+                map: map
+            });
+            */
+
+            <!-- Kartalla Rödjan bastu. -->
+            /*
+            var building = new google.maps.KmlLayer({
+                url: 'LinkkiPoistettu',
+                map: map
+            });
+            */
+
+            var markerOne = new google.maps.Marker({
+                position: {lat: 63.363, lng: 28.044},
+                map: map,
+                title: 'Marker 1'
+            });
+
+            var markerTwo = new google.maps.Marker({
+                position: {lat: 65.363, lng: 26.044},
+                map: map,
+                title: 'Marker 2'
             });
         }
     </script>
