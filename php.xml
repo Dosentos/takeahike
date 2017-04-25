@@ -1,0 +1,7 @@
+<application>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="C:\xampp\php\php.exe" id="2db3e2d2-6be0-4ca1-8ad5-24716b2e490b" name="PHP" debugger_id="php.debugger.XDebug" debugger_extension="C:\xampp\php\ext\php_xdebug.dll" />
+    </interpreters>
+  </component>
+</application>
