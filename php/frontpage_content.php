@@ -20,30 +20,6 @@
                 center: finland
             });
 
-            <!-- Kartalla Lemmenjoen ja Sipoonkorven kansallispuistot. EI TOIMI! -->
-            /*
-            var nationalpark = new google.maps.KmlLayer( {
-                url: 'LinkkiPoistettu',
-                map: map
-            });
-            */
-
-            <!-- Kartalla Rödjan bastu ja jokin toinen rakennus. EI TOIMI! -->
-            /*
-            var building = new google.maps.KmlLayer({
-                url: 'LinkkiPoistettu',
-                map: map
-            });
-            */
-
-            <!-- Kartalla Rödjan bastu. -->
-            /*
-            var building = new google.maps.KmlLayer({
-                url: 'LinkkiPoistettu',
-                map: map
-            });
-            */
-
             var markerOne = new google.maps.Marker({
                 position: {lat: 63.363, lng: 28.044},
                 map: map,
@@ -54,6 +30,29 @@
                 position: {lat: 65.363, lng: 26.044},
                 map: map,
                 title: 'Marker 2'
+            });
+
+            var headingOne =
+                '<div class="infowindowContent">' +
+                    'Nuuksion kansallispuisto' +
+                '</div>';
+
+            var infowindowOne = new google.maps.InfoWindow({
+                content: headingOne
+            });
+
+            var headingTwo = "Oulangan kansallispuisto";
+
+            var infowindowTwo = new google.maps.InfoWindow({
+                content: headingTwo
+            });
+
+            markerOne.addListener('click', function() {
+                infowindowOne.open(map, markerOne);
+            });
+
+            markerTwo.addListener('click', function() {
+                infowindowTwo.open(map, markerTwo);
             });
         }
     </script>

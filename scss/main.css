@@ -125,7 +125,10 @@ ol {
   /* frontpage_content.php */
   #map {
     height: 800px;
-    width: 100%; } }
+    width: 100%; }
+
+  .infowindowContent {
+    border: 2px solid blue; } }
 /* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 90.063em) {
   #logo img {
