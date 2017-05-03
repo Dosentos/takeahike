@@ -50,9 +50,9 @@ function buildDestinations($destinationAreaResult) {
 
     while( $destinationArea = $destinationAreaResult->fetch_assoc() ) {
         $destinationArray[] = new Destination( $destinationArea['name'],
-        $destinationArea['center'],
-        $destinationArea['coordinates'],
-        $destinationArea['location'] );
+                                                $destinationArea['center'],
+                                                $destinationArea['coordinates'],
+                                                $destinationArea['location'] );
     }
     return $destinationArray;
 }

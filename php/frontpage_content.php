@@ -1,8 +1,8 @@
-
 <main>
     <h3>Destinations in Finland</h3>
     <!-- API key Google Maps Javascript API:in: AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs -->
-    
+
+    <div id="testContainer"></div>
     <div id="map"></div>
     <script>
         function reqListener () {
@@ -13,16 +13,22 @@
         oReq.onload = function() {
             //This is where you handle what to do with the response.
             //The actual data is found on this.responseText
-            alert(this.responseText); //Will alert something about destinations
+
+            //this.response.forEach( function( destination ) {
+            //    var containerText = document.getElementById("testContainer");
+            //    document.getElementById("testContainer").innerHTML = containerText + destination;
+            //});
+            document.getElementById("testContainer").innerHTML = this.response.toString();
         };
 
-        oReq.open("get", "destination/destination_functions.php", true);
+        oReq.open("get", "php/destination/destination_functions.php", true);
         //                                                              ^ Don't block the rest of the execution.
         //                                                              Don't wait until the request finishes to
         //                                                              continue.
 
         oReq.send();
 
+        /*
         function initMap() {
             var finland = {lat: 64.6479041, lng: 17.1438697};
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -61,6 +67,7 @@
             marker.addListener('click', function() {
                 infowindow.open(map, marker);
             });
+            /*
 
             /*
              var position = {lat: 63.363, lng: 28.044};
@@ -69,10 +76,14 @@
                  'Nuuksion kansallispuisto' +
                  '</div>';
              */
+        /*
         }
+        */
     </script>
+    <!--
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs&callback=initMap">
     </script>
+    -->
 </main>
 
