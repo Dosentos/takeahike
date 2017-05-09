@@ -46,6 +46,7 @@ function convertCoordinates($coordString) {
 }
 
 function buildDestinations($destinationAreaResult) {
+    /*
     $destinationArray = [];
 
     while( $destinationArea = $destinationAreaResult->fetch_assoc() ) {
@@ -55,11 +56,26 @@ function buildDestinations($destinationAreaResult) {
                                                 $destinationArea['location'] );
     }
     return $destinationArray;
+    */
+    $destinationArray = [];
+    $destinationsArray = [];
+    $i = 0;
+    while( $destinationArea = $destinationAreaResult->fetch_assoc() ) {
+        $destinationArray += [ 0 => $destinationArea['name'] ];
+        $destinationArray += [ 1 => removeChars( $destinationArea['center'] ) ];
+        $destinationArray += [ 2 => removeChars( $destinationArea['coordinates'] ) ];
+        $destinationArray += [ 3 => $destinationArea['location'] ];
+
+        $destinationsArray += [ $i => $destinationArray ];
+        $destinationArray = [];
+        $i++;
+    }
+    return $destinationsArray;
 }
 
-$destinations = buildDestinations( getDestinationAreaData() );
-echo json_encode( $destinations );
-
+$destinationsArray = buildDestinations( getDestinationAreaData() ) ;
+//echo $destinationsArray;
+echo json_encode( $destinationsArray[0][1] ); //echoaa keskipisteen
 //echo json_encode(42);
 
 ?>
