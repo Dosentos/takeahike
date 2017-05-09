@@ -21,8 +21,8 @@
             //    document.getElementById("testContainer").innerHTML = containerText + destination;
             //});
             var positionArray = this.response.split(" ");
-            position = { lat: positionArray[1], lng: positionArray[0] };
-            initMap();
+            position = { lat: parseInt( positionArray[1] ), lng: parseInt( positionArray[0] ) };
+
             //document.getElementById("testContainer").innerHTML = position;
             // Laita position initMap-funktioon.
             // Kokeile koordinaattien tulostamista XAMPP:ssa niin ei tule bad gateway -virheilmoitusta.
