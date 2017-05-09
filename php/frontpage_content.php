@@ -20,10 +20,13 @@
             //    var containerText = document.getElementById("testContainer");
             //    document.getElementById("testContainer").innerHTML = containerText + destination;
             //});
-            var positionArray = this.response.split(" ");
-            position = { lat: parseInt( positionArray[1] ), lng: parseInt( positionArray[0] ) };
 
-            //document.getElementById("testContainer").innerHTML = position;
+            var withoutQuotes = this.response.replace( /"/g, "");
+            var positionArray = withoutQuotes.split(" ");
+            position = { lat: parseFloat( positionArray[1] ), lng: parseFloat( positionArray[0] ) };
+
+            // Kokeilun vuoksi sijoitetaan position-olion lng-ominaisuuden arvo testContaineriin.
+            document.getElementById("testContainer").innerHTML = position.lng;
             // Laita position initMap-funktioon.
             // Kokeile koordinaattien tulostamista XAMPP:ssa niin ei tule bad gateway -virheilmoitusta.
         };

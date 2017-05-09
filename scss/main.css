@@ -72,7 +72,15 @@ ol {
     display: none; }
 
   #tablet-nav {
-    display: none; } }
+    display: none; }
+
+  /* frontpage_content.php */
+  #map {
+    height: 300px;
+    width: 100%; }
+
+  .infowindowContent {
+    border: 2px solid blue; } }
 /* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 40.063em) {
   .nav-name {
@@ -108,7 +116,15 @@ ol {
     border-right: none; }
 
   .nav-borders:first-child {
-    border-left: 1px solid #f0f0f0; } }
+    border-left: 1px solid #f0f0f0; }
+
+  /* frontpage_content.php */
+  #map {
+    height: 400px;
+    width: 100%; }
+
+  .infowindowContent {
+    border: 2px solid blue; } }
 /* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 64.063em) {
   .nav-name {
@@ -124,7 +140,7 @@ ol {
 
   /* frontpage_content.php */
   #map {
-    height: 800px;
+    height: 600px;
     width: 100%; }
 
   .infowindowContent {
