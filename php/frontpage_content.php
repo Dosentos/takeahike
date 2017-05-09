@@ -87,5 +87,6 @@
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs&callback=initMap">
     </script>
+    <h2><a href="?page=destination&destinationid=404">Kohdesivut/Ahmalampi</a></h2>
 </main>
 
