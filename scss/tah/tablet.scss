@@ -35,3 +35,13 @@ nav{
 .nav-borders:first-child {
   border-left: 1px solid $gray2;
 }
+
+/* frontpage_content.php */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.infowindowContent {
+  border: 2px solid blue;
+}
