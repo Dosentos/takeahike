@@ -5,8 +5,11 @@
     <div id="testContainer"></div>
     <div id="map"></div>
     <script>
-        var position;
+        var position = {lat: 64.6479041, lng: 17.1438697};
+        var xmlContent = '<?php echo require 'php/destination/generate_marker_xml.php' ?>';
+        alert( xmlContent.slice( 0, -1 ) );
 
+        /*
         function reqListener () {
             console.log(this.responseText);
         }
@@ -16,17 +19,10 @@
             //This is where you handle what to do with the response.
             //The actual data is found on this.responseText
 
-            //this.response.forEach( function( destination ) {
-            //    var containerText = document.getElementById("testContainer");
-            //    document.getElementById("testContainer").innerHTML = containerText + destination;
-            //});
+            //var withoutQuotes = this.response.replace( /"/g, "");
+            //var positionArray = withoutQuotes.split(" ");
+            //position = { lat: parseFloat( positionArray[1] ), lng: parseFloat( positionArray[0] ) };
 
-            var withoutQuotes = this.response.replace( /"/g, "");
-            var positionArray = withoutQuotes.split(" ");
-            position = { lat: parseFloat( positionArray[1] ), lng: parseFloat( positionArray[0] ) };
-
-            // Kokeilun vuoksi sijoitetaan position-olion lng-ominaisuuden arvo testContaineriin.
-            document.getElementById("testContainer").innerHTML = position.lng;
             // Laita position initMap-funktioon.
             // Kokeile koordinaattien tulostamista XAMPP:ssa niin ei tule bad gateway -virheilmoitusta.
         };
@@ -38,6 +34,7 @@
 
         oReq.send();
 
+        */
         function initMap() {
             var finland = {lat: 64.6479041, lng: 17.1438697};
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -86,9 +83,10 @@
              */
         }
     </script>
-
+    <!--
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs&callback=initMap">
     </script>
+    -->
 </main>
 
