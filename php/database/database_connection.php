@@ -2,7 +2,7 @@
 
 function dbConnect(){
     if(!isset($mysqli)){
-        $config = parse_ini_file_quotes_safe("../../../db.ini");
+        $config = parse_ini_file_quotes_safe("../db.ini");
         $mysqli = new mysqli($config['addr'], $config['user'], $config['pass'], $config['db']);
     }
 
