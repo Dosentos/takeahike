@@ -5,10 +5,6 @@
     <div id="testContainer"></div>
     <div id="map"></div>
     <script>
-        var position = {lat: 64.6479041, lng: 17.1438697};
-        var xmlContent = '<?php echo require 'php/destination/generate_marker_xml.php' ?>';
-        alert( xmlContent.slice( 0, -1 ) );
-
         /*
         function reqListener () {
             console.log(this.responseText);
@@ -41,6 +37,47 @@
                 zoom: 5,
                 center: finland
             });
+            var infoWindow = new google.maps.InfoWindow;
+
+            // Laita näiden kahden rivin tilalle AJAX-kutsu
+            // https://developers.google.com/maps/documentation/javascript/mysql-to-maps
+            var xmlContent = '<?php echo require 'php/destination/generate_marker_xml.php' ?>';
+            xmlContent = xmlContent.slice( 0, -1 );
+
+            var xml = xmlContent.responseXML;
+            var markers = xml.documentElement.getElementsByTagName('marker');
+            Array.prototype.forEach.call(markers, function(markerElem) {
+                var id = markerElem.getAttribute('id');
+                var name = markerElem.getAttribute('name');
+                var location = markerElem.getAttribute('location');
+
+                var centerWithoutQuotes = markerElem.getAttribute('center').replace( /"/g, "");
+                var coordinateArray = centerWithoutQuotes.split(" ");
+                var lat = parseFloat( coordinateArray[1] );
+                var lng = parseFloat( coordinateArray[0] );
+                var center = new google.maps.LatLng(lat, lng);
+
+                var infowincontent = document.createElement('div');
+                var strong = document.createElement('strong');
+                strong.textContent = name;
+                infowincontent.appendChild(strong);
+                infowincontent.appendChild(document.createElement('br'));
+
+                //var text = document.createElement('text');
+                //text.textContent = address;
+                //infowincontent.appendChild(text);
+                var icon = customLabel[type] || {};
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: center,
+                    label: icon.label
+                });
+
+                marker.addListener('click', function () {
+                    infoWindow.setContent(infowincontent);
+                    infoWindow.open(map, marker);
+                });
+            });
 
             // Alueiden (tässä Nuuksion (vai oliko Oulangan?) kansallispuiston tapauksessa tietokannasta haetaan vain
             // polygonin uloimmat koordinaatit. Ne pitäisi saada seuraavan Googlen esimerkin paths-kohtaan:
@@ -55,39 +92,12 @@
             //});
             // Koordinaatit ovat tietokannassa lisäksi väärin päin (ekana lng).
 
-            var marker = new google.maps.Marker({
-                // Tietokannasta haetaan alueen keskikoordinaatit. Koordinaatit pitää vielä muuntaa niin, että ne
-                // kelpaavat seuraavaan:
-                // new google.maps.LatLng(-33.863276, 151.207977)
-                position: position,
-                map: map,
-                title: "Testi"
-            });
-
-            var infowindow = new google.maps.InfoWindow({
-                content: '<div class="infowindowContent">' +
-                'Testi' +
-                '</div>'
-            });
-
-            marker.addListener('click', function() {
-                infowindow.open(map, marker);
-            });
-
-            /*
-             var position = {lat: 63.363, lng: 28.044};
-             var heading =
-                 '<div class="infowindowContent">' +
-                 'Nuuksion kansallispuisto' +
-                 '</div>';
-             */
         }
     </script>
-    <!--
+
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs&callback=initMap">
     </script>
     <h2><a href="?page=destination&destinationid=404">Kohdesivut/Ahmalampi</a></h2>
-    -->
 </main>
 
