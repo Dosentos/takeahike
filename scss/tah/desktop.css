@@ -9,4 +9,9 @@
   padding-top: 20px;
   height: 100px; }
 
+/* frontpage_content.php */
+#map {
+  height: 800px;
+  width: 100%; }
+
 /*# sourceMappingURL=desktop.css.map */
