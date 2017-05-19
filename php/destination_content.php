@@ -8,7 +8,7 @@
 require('database/database_connection.php');
 require('database/check_query_result.php');
 $mysqli = dbConnect();
-$query = "SELECT destination.id, destination.name, destination.country, polygon.coordinates FROM destination INNER JOIN polygon ON polygon.destination_id = destination.id WHERE polygon.destination_id=". $_GET['destinationid'] .";";
+$query = "SELECT destination.id, xml_functions.name, xml_functions.country, polygon.coordinates FROM xml_functions INNER JOIN polygon ON polygon.destination_id = xml_functions.id WHERE polygon.destination_id=". $_GET['destinationid'] .";";
 $result = mysqli_query($mysqli, $query);
 checkQueryResult($result);
 

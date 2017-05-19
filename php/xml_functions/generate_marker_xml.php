@@ -40,8 +40,7 @@ function getDestinationAreaData() {
                     INNER JOIN polygon ON polygon.destination_id=destination.id
                     WHERE outer_border=TRUE AND polygon.destination_id=853 LIMIT 5;';*/
     $areaQuery = 'SELECT destination.id, destination.name, AsText(destination.center) AS center
-                  FROM destination
-                  LIMIT 10;';
+                  FROM destination;';
     $destinationAreaResult = mysqli_query($mysqli, $areaQuery);
 
     if(!checkQueryResult($destinationAreaResult)){
@@ -52,31 +51,31 @@ function getDestinationAreaData() {
 }
 
 function generateMarkerXML() {
-    //header("Content-type: text/xml");
+    if( file_exists( 'xml/markers.xml' ) ) {
+        unlink( 'xml/markers.xml' );
+    }
 
     // Start XML file, write parent node to file
-    $xmlFile = fopen("markers.xml", "w") or die("Unable to open file!");
-    fwrite( $xmlFile, '<markers>');
+    $xmlFile = fopen("xml/markers.xml", "a") or die("Unable to open file!");
+    fwrite( $xmlFile, '<?xml version="1.0" encoding="UTF-8" standalone="no" ?>' . "\n" );
+    fwrite( $xmlFile, '<markers>' . "\n" );
 
     // Iterate through the rows, writing XML nodes for each
     $destinationAreaData = getDestinationAreaData();
     while ( $row = $destinationAreaData->fetch_assoc() ) {
         // Add to XML document node
-        fwrite( $xmlFile, '<marker ' );
+        fwrite( $xmlFile, "\t" . '<marker ' );
         fwrite( $xmlFile, 'id="' . $row['id'] . '" ' );
-        fwrite( $xmlFile, 'name="' . parseToXML( $row['name'] ) . '" ' );
-        // echo 'location="' . parseToXML( $row['location'] ) . '" ';
+        fwrite( $xmlFile, 'name="' . utf8_encode( parseToXML( $row['name'] ) ) . '" ' );
         fwrite( $xmlFile, 'center="' . parseToXML( removeChars( $row['center'] ) ) . '" ' );
-        fwrite( $xmlFile, '/>' );
+        fwrite( $xmlFile, '/>' . "\n" );
     }
 
     // End XML file
     fwrite( $xmlFile, '</markers>' );
     fclose( $xmlFile );
-
-    return $xmlFile;
 }
 
-//generateMarkerXML();
+generateMarkerXML();
 
 ?>
