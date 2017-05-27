@@ -77,10 +77,7 @@ ol {
   /* frontpage_content.php */
   #map {
     height: 300px;
-    width: 100%; }
-
-  .infowindowContent {
-    border: 2px solid blue; } }
+    width: 100%; } }
 /* Vaikuttavat vain 0px - 640px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 40.063em) {
   .nav-name {
@@ -121,10 +118,7 @@ ol {
   /* frontpage_content.php */
   #map {
     height: 400px;
-    width: 100%; }
-
-  .infowindowContent {
-    border: 2px solid blue; } }
+    width: 100%; } }
 /* Vaikuttavat vain 641px - 1024px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 64.063em) {
   .nav-name {
@@ -141,10 +135,18 @@ ol {
   /* frontpage_content.php */
   #map {
     height: 600px;
-    width: 100%; }
+    width: 800px; }
 
-  .infowindowContent {
-    border: 2px solid blue; } }
+  .filterPanel {
+    float: left;
+    width: 200px;
+    height: auto;
+    border: 2px solid grey; }
+
+  .locationFilterContainer {
+    width: 180px;
+    height: 150px;
+    border: 2px solid brown; } }
 /* Vaikuttavat vain 1025 - 1440px kokoisiin, ei suurempiin */
 @media only screen and (min-width: 90.063em) {
   #logo img {

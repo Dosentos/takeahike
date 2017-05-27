@@ -2,6 +2,8 @@
 require "php/database/database_connection.php";
 require "php/database/check_query_result.php";
 
+//$locationFilterValues = $_GET[]
+
 function parseToXML($htmlStr) {
     $xmlStr=str_replace('<','&lt;',$htmlStr);
     $xmlStr=str_replace('>','&gt;',$xmlStr);

@@ -1,13 +1,24 @@
 <?php
-require 'php/xml_functions/generate_marker_xml.php';
+require "php/xml_functions/generate_marker_xml.php";
 ?>
 
+<!-- <h2><a href="?page=destination&destinationid=404">Kohdesivut/Ahmalampi</a></h2> -->
 <main>
-    <h3>Destinations in Finland</h3>
-    <!-- API key Google Maps Javascript API:in: AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs -->
+    <div id="filterPanelAndMap">
+        <div id="filterPanel">
+            <div id="locationFilterContainer">
+                <form>
+                    <p>Sijainti</p>
+                    <input type="checkbox" name="location1" value="north" class="locationFilter" checked>Pohjoinen<br>
+                    <input type="checkbox" name="location2" value="center" class="locationFilter" checked>Keski<br>
+                    <input type="checkbox" name="location3" value="south" class="locationFilter" checked>Etelä<br>
+                </form>
+            </div>
+        </div>
+        <!-- API key Google Maps Javascript API:in: AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs -->
+        <div id="map"></div>
+    </div>
 
-    <div id="testContainer"></div>
-    <div id="map"></div>
     <script>
         function initMap() {
             var finland = {lat: 64.6479041, lng: 17.1438697};
@@ -72,6 +83,6 @@ require 'php/xml_functions/generate_marker_xml.php';
     <script async defer
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXvGjS2pVvCg1fac8IjYXnyFob7FUqoMs&callback=initMap">
     </script>
-    <h2><a href="?page=destination&destinationid=404">Kohdesivut/Ahmalampi</a></h2>
+
 </main>
 

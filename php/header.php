@@ -44,6 +44,7 @@
 
     <!-- Take a Hike JS -->
     <script src="js/functions.js" type="text/javascript"></script>
+    <script src="js/filter_functions.js" type="text/javascript"></script>
 </head>
 <body>
 <header>

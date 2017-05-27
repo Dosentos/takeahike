@@ -14,10 +14,20 @@
 
 /* frontpage_content.php */
 #map {
+  //float: right;
   height: 600px;
-  width: 100%;
+  width: 800px;
 }
 
-.infowindowContent {
-  border: 2px solid blue;
+.filterPanel {
+  float: left;
+  width: 200px;
+  height: auto;
+  border: 2px solid grey;
+}
+
+.locationFilterContainer {
+  width: 180px;
+  height: 150px;
+  border: 2px solid brown;
 }
